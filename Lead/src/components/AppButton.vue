@@ -1,14 +1,26 @@
 <template>
-  <button class="button">
+  <button
+    :style="buttonStyles"
+    class="button"
+  >
     <slot></slot>
   </button>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const {width} = defineProps<{
+  width: string;
+}>();
+
+const buttonStyles = {
+  width: width ? width : "200px",
+};
+</script>
 
 <style lang="scss" scoped>
 .button {
-  text-align: start;
+  cursor: pointer;
+  text-align: center;
   width: 240px;
   height: 60px;
   background: #1d4169;

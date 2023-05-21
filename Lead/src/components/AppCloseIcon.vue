@@ -1,5 +1,6 @@
 <template>
   <svg
+    class="close"
     width="25"
     height="25"
     viewBox="0 0 25 25"
@@ -28,4 +29,8 @@
 
 <script setup lang="ts"></script>
 
-<style scoped></style>
+<style scoped>
+.close {
+  cursor: pointer;
+}
+</style>

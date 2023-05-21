@@ -1,4 +1,3 @@
-import { DEADLINE } from "../constants/deadline";
 
 const calculateTimeFromDeadLine = (deadline: string) => {
   const currentTime = new Date();
