@@ -1,8 +1,5 @@
 <template>
-  <AppPopup
-    class="popup"
-    @close="emits('close')"
-  >
+  <AppPopup class="popup" @close="emits('close')">
     <template v-if="result">
       <h3>SUCCESS!</h3>
       <p>You have successfully subscribed to the email newsletter</p>
@@ -19,7 +16,7 @@
 <script lang="ts" setup>
 import AppPopup from "./AppPopup.vue";
 import AppButton from "./AppButton.vue";
-const {result} = defineProps<{
+const { result } = defineProps<{
   result: Boolean;
 }>();
 

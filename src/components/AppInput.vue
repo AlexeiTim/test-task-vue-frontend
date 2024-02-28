@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-const {placeholder = "16px 73px"} = defineProps<{
+const { placeholder = "16px 73px" } = defineProps<{
   placeholder: string;
   value: string;
 }>();

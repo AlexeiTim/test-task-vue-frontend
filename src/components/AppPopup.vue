@@ -1,17 +1,8 @@
 <template>
-  <div
-    class="cover"
-    @click="closePopup"
-  >
-    <div
-      @click.stop
-      class="popup"
-    >
+  <div class="cover" @click="closePopup">
+    <div @click.stop class="popup">
       <div class="popup__header">
-        <AppCloseIcon
-          class="popup__close"
-          @click="closePopup"
-        />
+        <AppCloseIcon class="popup__close" @click="closePopup" />
       </div>
       <slot></slot>
     </div>

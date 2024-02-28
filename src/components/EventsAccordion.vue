@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import {IEvent} from "../types/event.interface";
+import { IEvent } from "../types/event.interface";
 import EventsAccordionItem from "./EventsAccordionItem.vue";
 const props = defineProps<{
   events: IEvent[];

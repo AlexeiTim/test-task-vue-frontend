@@ -1,12 +1,14 @@
 <template>
   <div class="timer__item">
     <p class="item__time">{{ props.clock.time }}</p>
-    <AppTextBackground class="item__bg">{{ props.clock.name }}</AppTextBackground>
+    <AppTextBackground class="item__bg">{{
+      props.clock.name
+    }}</AppTextBackground>
   </div>
 </template>
 
 <script setup lang="ts">
-import {IClock} from "../types/clock.interface";
+import { IClock } from "../types/clock.interface";
 import AppTextBackground from "./AppTextBackground.vue";
 interface Props {
   clock: IClock;

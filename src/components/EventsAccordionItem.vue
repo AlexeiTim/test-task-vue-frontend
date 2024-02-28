@@ -2,7 +2,9 @@
   <div :class="`accordion__item`">
     <div
       :class="`accordion__item-left`"
-      :style="{backgroundImage: notActiveElements ? `url('${event.image}')` : ''}"
+      :style="{
+        backgroundImage: notActiveElements ? `url('${event.image}')` : '',
+      }"
     >
       <div
         v-if="notActiveElements"
@@ -22,9 +24,7 @@
         <div class="info-number">{{ "0" + (index + 1) }}</div>
         <h4>{{ event.name }}</h4>
         <p>{{ event.date }}</p>
-        <a
-          href="https://egorovagency.by/#main"
-          target="_blank"
+        <a href="https://egorovagency.by/#main" target="_blank"
           ><button class="item__button">More information</button></a
         >
       </div>
@@ -43,14 +43,16 @@
 </template>
 
 <script setup lang="ts">
-import {computed} from "vue";
-import {IEvent} from "../types/event.interface";
+import { computed } from "vue";
+import { IEvent } from "../types/event.interface";
 const props = defineProps<{
   activeEvent: number;
   event: IEvent;
   index: number;
 }>();
-const notActiveElements = computed(() => !(props.activeEvent == props.index + 1));
+const notActiveElements = computed(
+  () => !(props.activeEvent == props.index + 1)
+);
 </script>
 
 <style lang="scss" scoped>
@@ -562,7 +564,7 @@ const notActiveElements = computed(() => !(props.activeEvent == props.index + 1)
     width: 169px;
     font-size: 16px;
     height: 44px;
-    color: #FFFFFF;
+    color: #ffffff;
   }
 }
 

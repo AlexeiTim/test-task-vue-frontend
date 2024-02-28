@@ -28,7 +28,7 @@
 <script setup lang="ts">
 import AppArrowIcon from "../components/AppArrowIcon.vue";
 import AppInput from "../components/AppInput.vue";
-const {email} = defineProps<{
+const { email } = defineProps<{
   email: string;
 }>();
 const emits = defineEmits<{

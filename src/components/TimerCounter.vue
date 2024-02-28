@@ -2,7 +2,6 @@
   <div class="timer">
     <template v-for="(clock, index) in clocks" :key="clock.name">
       <span class="timer__quotes" v-if="index !== 0">:</span>
-
       <TimerItem :clock="clock" />
     </template>
   </div>

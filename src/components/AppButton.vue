@@ -1,14 +1,11 @@
 <template>
-  <button
-    :style="buttonStyles"
-    class="button"
-  >
+  <button :style="buttonStyles" class="button">
     <slot></slot>
   </button>
 </template>
 
 <script setup lang="ts">
-const {width} = defineProps<{
+const { width } = defineProps<{
   width: string;
 }>();
 

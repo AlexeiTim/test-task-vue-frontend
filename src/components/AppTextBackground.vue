@@ -32,5 +32,4 @@ import backgroundText from "../assets/images/Vector.png";
     font-size: 16px;
   }
 }
-
 </style>

@@ -1,1 +1,1 @@
-export const DEADLINE = '31.05.2023';
+export const DEADLINE = "2024-05-31";

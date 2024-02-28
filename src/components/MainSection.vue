@@ -1,26 +1,23 @@
 <template>
   <section class="main">
     <div class="content">
-      <a href="/"><AppLogo :class="`content__logo ${props.giveShowClass}`" /></a>
+      <a href="/"
+        ><AppLogo :class="`content__logo ${props.giveShowClass}`"
+      /></a>
 
       <div :class="`content__titles ${props.giveShowClass}`">
         <h1 class="content__title">Under Construction</h1>
-        <h3 class="content__subtitle">We're making lots of improvements and will be back soon</h3>
+        <h3 class="content__subtitle">
+          We're making lots of improvements and will be back soon
+        </h3>
       </div>
 
       <TimerCounter :class="`content__timer ${props.giveShowClass}`" />
       <div :class="`content__event-info ${props.giveShowClass}`">
         <p>Check our event page when you wait:</p>
         <div class="event-button">
-          <a
-            href="https://egorovagency.by/#main"
-            target="_blank"
-          >
-            <AppButton
-              class="button"
-              width="240px"
-              >Go to the event</AppButton
-            >
+          <a href="https://egorovagency.by/#main" target="_blank">
+            <AppButton class="button" width="240px">Go to the event</AppButton>
             <AppArrowIcon class="icon"
           /></a>
         </div>

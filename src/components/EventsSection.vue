@@ -1,8 +1,5 @@
 <template>
-  <section
-    id="events"
-    class="events"
-  >
+  <section id="events" class="events">
     <h2 class="events__title">All events</h2>
     <EventsAccordion
       @changeActiveEvent="setActiveEvent"
@@ -13,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import {ref} from "vue";
+import { ref } from "vue";
 import {
   partyImage1,
   partyImage2,
@@ -25,7 +22,7 @@ import {
   partyImage8,
 } from "../constants/images";
 import EventsAccordion from "./EventsAccordion.vue";
-import {IEvent} from "../types/event.interface";
+import { IEvent } from "../types/event.interface";
 const events = ref<IEvent[]>([
   {
     name: "Hawaiian party",
