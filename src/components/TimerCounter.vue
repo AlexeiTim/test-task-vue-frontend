@@ -1,14 +1,7 @@
 <template>
   <div class="timer">
-    <template
-      v-for="(clock, index) in clocks"
-      :key="clock.name"
-    >
-      <span
-        class="timer__quotes"
-        v-if="index !== 0"
-        >:</span
-      >
+    <template v-for="(clock, index) in clocks" :key="clock.name">
+      <span class="timer__quotes" v-if="index !== 0">:</span>
 
       <TimerItem :clock="clock" />
     </template>
@@ -16,16 +9,16 @@
 </template>
 
 <script setup lang="ts">
-import {ref} from "vue";
+import { ref } from "vue";
 import TimerItem from "./TimerItem.vue";
 import calculateTimeFromDeadline from "../utils/calculateTimeFromDeadline";
-import {convertToShortDate} from "../utils/convertToShortDate";
+import { convertToShortDate } from "../utils/convertToShortDate";
 import { IClock } from "../types/clock.interface";
-const deadline = "2023-05-31";
+import { DEADLINE } from "../constants/deadline";
 
 const clocks = ref<IClock[]>([]);
 const initTimer = () => {
-  const {days, hours, minutes, seconds} = calculateTimeFromDeadline(deadline);
+  const { days, hours, minutes, seconds } = calculateTimeFromDeadline(DEADLINE);
   clocks.value = [
     {
       time: days,
